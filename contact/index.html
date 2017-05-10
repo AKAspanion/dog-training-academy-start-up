@@ -1,0 +1,178 @@
+<!-- this is jayshrees contact index -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="uts-8"/>
+		<title>Contact | Dog Training Academy | Jayashree Ram Mohan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+		<link rel ="shortcut icon" href="../images/dog-paw.png" type="image/ico">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Indie+Flower|Dosis" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<head>
+		
+	<body>
+		
+		<div class="loader" id="load_screen">
+			<div class="loader-content">
+				<div class="spinner"><img src="../images/dog-bone.png"></img></div>
+				<div class="text"><h1>LOADING...</h1></div>
+			</div>
+		</div>
+		
+		<nav>
+            <ul>						
+				<li ><a href="../index.html"> HOME </a></li>
+				<!-- <li ><a href="../blog/"> BLOG</a></li> -->
+				<li ><a href="../about/index.html"> ABOUT </a></li>
+            </ul>
+			
+            <a href="#" class="nav-toggle-btn"><img src="../images/toggle.png"></img></a>
+        </nav>
+		
+		<div class="container">
+			<div class="quick-connect">
+				<p><img src="../images/call-white.png"></img>+91 9748810570
+				<img src="../images/mail-white.png">jayashreedogtrainer@gmail.com</img></p>
+			</div>
+			<div class="nav-bar">
+				<div class="left-bar">
+					<h1>Jayashree Dog Training Academy</h1>
+				</div>
+				<div class="right-bar">
+					<ul>						
+						<li ><a href="../index.html"> HOME </a></li>
+						<!-- <li ><a href="../blog/"> BLOG</a></li> -->
+						<li ><a href="../about/index.html"> ABOUT </a></li>
+					</ul>
+				</div>
+				
+			</div>
+		
+			<div class="placeholder">
+				
+			</div>
+			<div id="contact" class="contact">
+			
+				<div class="contact-head">
+					<div class="heading"><h1>Contact Me</h1></div>
+					<img src="../images/bg-banner.jpg">
+				</div>
+				
+				<div class="contact-desc">
+					<div class="contact-desc-para">
+				
+						<h1>Looking forward to train your furry family members</h1>
+						<p>If you are looking for a dog trainer around South Kolkata or have any questions 
+						about any of my services. Contact me immediately. <br>
+						I am looking forward to met you and your pet!</p>
+					</div>
+					
+					<div class="contact-desc-btn">
+						<a href="#form">Contact</a>
+					</div>
+				</div>
+				
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3685.7597948905527!2d88.35049510849795!3d22.51319376724961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f145cbf00dc65d4!2sJayashree+Dog+Training+Academy!5e0!3m2!1sen!2sin!4v1489934905740" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<div id="form" class="frm">
+						<div class="head">
+							<h1>Get In Touch</h1>
+						</div>
+						<form name = "myForm" action="contact_added.php" onsubmit="return validateForm()" method="post">
+							<p><input type = "text" name = "first_name"  placeholder="First Name" value="" required/></p>
+							<p><input type = "text" name = "last_name"  placeholder="Last Name" value="" required/></p>
+							<p><input type = "text" name = "email" placeholder="Email" value="" required/></p>
+							<p><input type = "text" name = "message"  placeholder="Your Message" required/></p>
+							<div class="submits">
+								<p><input class= "btn" type = "submit" name="submit" value = "Submit" /></p>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="call-me">
+					<img src="../images/call-me.png"></img>
+				</div>
+			</div>
+			
+			<div class="footer">
+				<div class="left-footer">
+					<p>Made with <img src="../images/heart-icon.png"></img> by 
+					<a href="http://www.spanion.xyz/" title="Go to Ankit's Website">Ankit Kumar</img></a></p>
+				</div>
+				<div class="right-footer">
+					<a href="https://www.facebook.com/Jayu311" title="Go to Jayashree's facebook profile">
+					<img src="../images/facebook.png" alt="Go to Jayashree's Facebook page"></img></a>
+				</div>
+			</div>
+		</div>
+		<script>
+			window.addEventListener("load", function(){
+                
+                setTimeout(function() {
+                    $(".loader-content").css("transform", "translate(0, 100vh)");
+                }, 500);
+                setTimeout(function() {
+                    $(".loader").css("transform", "translate(0, -100vh)");
+                    $(".loader-content").css("display", "none");
+                }, 1000);
+                setTimeout(function() {
+                    $(".loader").css("display", "none");
+                }, 1500);
+			})
+		</script>
+		<script>
+			var nav= jQuery(".nav-bar").offset().top;
+			  
+			  jQuery(window).scroll(function() {
+				
+					scrollPos = jQuery(window).scrollTop();
+					
+					if (scrollPos >= 20) {
+						jQuery(".nav-bar").addClass("border-go");
+					}
+					else{
+						jQuery(".nav-bar").removeClass("border-go");
+					}
+				});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("a").on('click', function(event) {
+				if (this.hash !== "") {
+				event.preventDefault();
+				  var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top }, 1500, function(){
+					
+					window.location.hash = hash;
+				  });
+				} 
+			  });
+			});
+		</script>
+		<script>
+			(function() {
+				
+				var bodyEl = $('body'),
+					navToggleBtn = bodyEl.find('.nav-toggle-btn'),
+					navi = bodyEl.find('nav'),
+					navListBtn = bodyEl.find('.nav-list-item');
+				
+				navToggleBtn.on('click', function(e) {
+					navi.toggleClass('active-nav');
+					e.preventDefault();
+				});
+				navListBtn.on('click', function(e) {
+					navi.toggleClass('active-nav');
+					e.preventDefault();
+				});
+			})(); 
+			
+			jQuery(window).scroll(function() {
+				jQuery("nav").removeClass("active-nav");
+			});
+		</script>
+	</body>
+</html>
